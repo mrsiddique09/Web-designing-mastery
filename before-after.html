@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .mag-link {
+        color: blue;
+
+        text-decoration: none;
+        position: relative;
+      }
+      .mag-link::before {
+        content: " 🚀";
+      }
+      .mag-link::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        height: 2px;
+        background-color: blue;
+        width: 0;
+        transition: all 0.6s ease;
+      }
+      .mag-link:hover::after {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+   <div style="text-align: center;"> <a href="#" class="mag-link">Hover over me!</a></div>
+  </body>
+</html>
